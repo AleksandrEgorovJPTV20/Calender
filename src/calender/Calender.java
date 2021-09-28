@@ -18,12 +18,14 @@ public class Calender{
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите год: ");
         int year = scanner.nextInt();
-        int formula = (year/10)*10;
-        int colour = year - formula;
-        int animal = year%12;
+        int formula = (year/10)*10; //Переменную введёную пользователем year делим на 10, и умножаем.
+        int colour = year - formula; //Переменную year вычитаем на значение переменной formula. Например 2003-2000, colour получает остаток.
+        int animal = year%12; // Делит year на 12 и возвращает остаток, сохраняется в перемнной
 
         System.out.print("Год ");
 
+        //Условный оператор, который дает возможность сравнивать переменную со списком значений.
+        // Если значение colour = 4 и значение animal = 6 то он выведет на экран год зеленого тигра!
         switch (animal) {
             case 0:
             case 1:
